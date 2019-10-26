@@ -2,7 +2,8 @@
 
 
 ## Caddy 一键安装脚本
-参考 1. 233boy一键安装脚本*https://github.com/233boy/v2ray/tree/master*  
+参考  
+     1. 233boy一键安装脚本*https://github.com/233boy/v2ray/tree/master*  
      2. caddy 官方systemd配置 *https://github.com/caddyserver/caddy/tree/master/dist/init/linux-systemd*  
      3. 其他一键安装脚本 *https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh*  
 
