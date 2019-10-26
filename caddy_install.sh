@@ -106,16 +106,16 @@ install_caddy_service() {
     local email=$(((RANDOM << 22)))
     cat >/etc/caddy/Caddyfile <<-EOF
 caddy_install.com {
-    tls ${email}@qq.com
-    gzip
-    timeouts none
-    proxy /https://bing.com {
-        except /v2ice
-    }
-    proxy /v2ice 127.0.0.1:9000 {
-        without /v2ice
-        websocket
-    }
+	tls /etc/v2ray/cf.crt /etc/v2ray/cf.key
+	gzip
+    		timeouts none
+    	proxy /https://cn.bing.com {
+        	except /v2ice
+    	}
+    	proxy /v2ice 127.0.0.1:9000 {
+        	without /v2ice
+        	websocket
+    	}
 }
 import sites/*
 EOF
