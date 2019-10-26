@@ -9,7 +9,8 @@
 
 ## 功能
    文件安装位置  /usr/local/bin/caddy  
-   Caddyfile   /etc/caddy/Caddyfile  
+   Caddyfile文件位置   /etc/caddy/Caddyfile 
+   脚本需要以 root 权限执行，可以自动以官方形式安装caddy服务。
    配置文件默认为 websocket反向代理，请自行修改Caddyfile文件,[官方文档](https://caddyserver.com/v1/tutorial)，然后执行  `systemctl restart caddy.service`  
    
 ## 基本操作
