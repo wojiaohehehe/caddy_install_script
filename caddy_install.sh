@@ -105,7 +105,7 @@ install_caddy_service() {
 
     local email=$(((RANDOM << 22)))
     cat >/etc/caddy/Caddyfile <<-EOF
-caddy_install.com {
+https://caddy_install.com {
 	tls /etc/v2ray/cf.crt /etc/v2ray/cf.key
 	gzip
     		timeouts none
