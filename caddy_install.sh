@@ -70,7 +70,7 @@ download_caddy_file() {
 }
 install_caddy_service() {
     if ! [ -x "$(command -v setcap)" ]; then
-        apt-get update && apt-get install libcap2-bin
+        apt-get update && apt-get install libcap2-bin -y
     fi
 	setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/caddy
 
@@ -106,8 +106,8 @@ install_caddy_service() {
     local email=$(((RANDOM << 22)))
     cat >/etc/caddy/Caddyfile <<-EOF
 https://caddy_install.com {
-	tls /etc/v2ray/cf.crt /etc/v2ray/cf.key
-	gzip
+        tls /etc/v2ray/cf.crt /etc/v2ray/cf.key
+        gzip
     		timeouts none
     	proxy /https://cn.bing.com {
         	except /v2ice
