@@ -113,8 +113,8 @@ https://caddy_install.com {
         	except /v2ice
     	}
     	proxy /v2ice 127.0.0.1:9000 {
-        	without /v2ice
         	websocket
+		header_upstream X-Forwarded-Proto {scheme}
     	}
 }
 import sites/*
